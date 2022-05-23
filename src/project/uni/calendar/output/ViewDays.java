@@ -2,7 +2,6 @@ package project.uni.calendar.output;
 
 import project.uni.calendar.PersonalCalendar;
 import project.uni.exception.InvalidDataException;
-import project.uni.interfaces.Output;
 
 import java.util.List;
 

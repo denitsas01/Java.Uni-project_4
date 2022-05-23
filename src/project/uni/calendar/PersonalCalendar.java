@@ -7,6 +7,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public abstract class PersonalCalendar {
@@ -16,6 +18,7 @@ public abstract class PersonalCalendar {
     private String note;
     private String startTime;
     private String endTime;
+    private static Map<String, String> calendar = new HashMap<>();
 
     public PersonalCalendar(String date, String meetingName, String note, String startTime, String endTime) throws InvalidDataException {
         setDate(date);
@@ -78,6 +81,14 @@ public abstract class PersonalCalendar {
         int hour = localTime.get(ChronoField.CLOCK_HOUR_OF_DAY);
         int minute = localTime.get(ChronoField.MINUTE_OF_HOUR);
         this.endTime = hour +":"+ minute;
+    }
+
+    public static Map<String, String> getCalendar() {
+        return calendar;
+    }
+
+    public static void setCalendar(Map<String, String> calendar) {
+        PersonalCalendar.calendar = calendar;
     }
 
     @Override

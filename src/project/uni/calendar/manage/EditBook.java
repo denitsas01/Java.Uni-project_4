@@ -2,7 +2,6 @@ package project.uni.calendar.manage;
 
 import project.uni.calendar.PersonalCalendar;
 import project.uni.exception.InvalidDataException;
-import project.uni.interfaces.Manage;
 
 public class EditBook extends PersonalCalendar implements Manage {
 

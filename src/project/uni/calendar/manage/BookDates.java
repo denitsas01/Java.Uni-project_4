@@ -2,7 +2,6 @@ package project.uni.calendar.manage;
 
 import project.uni.calendar.PersonalCalendar;
 import project.uni.exception.InvalidDataException;
-import project.uni.interfaces.BookDate;
 
 public class BookDates extends PersonalCalendar implements BookDate {
 
